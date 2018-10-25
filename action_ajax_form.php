@@ -23,7 +23,7 @@ function json_encode_cyr($str) {
     return $str2;
 }
 
-$pos = strpos(file_get_contents("https://volosy-developer-edition.eu16.force.com/services/apexrest/AllCities"), $tans );
+$pos = strpos(file_get_contents("https://url"), $tans );
 if ($pos == true) {
     $list = array(
         'name' => $_POST["name"],
@@ -35,7 +35,7 @@ if ($pos == true) {
     $data = $list;
     $data_string = json_encode($data);
 
-    $ch = curl_init('https://volosy-developer-edition.eu16.force.com/services/apexrest/CreateLead');
+    $ch = curl_init('https://url');
     curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
     curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -57,7 +57,7 @@ if ($pos == true) {
     $data = $list;
     $data_string = json_encode($data);
 
-    $ch = curl_init('https://volosy-developer-edition.eu16.force.com/services/apexrest/CreateLead');
+    $ch = curl_init('url');
     curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
     curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
